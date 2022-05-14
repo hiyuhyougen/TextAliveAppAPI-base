@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <!--タイトルとcssファイルのリンク(使っていない)-->
+        <title>TextAlive App API | proto-6</title>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <!--↓↓↓音楽が再生される区画-->
+        <div id="media"></div>
+        <!--↓↓↓再生ボタン-->
+        <button id="play">play</button>
+        <!--↓↓↓停止ボタン-->
+        <button id="stop">stop</button>
+        <!--↓↓↓曲名表示の区画-->
+        <div id="song_name"></div>
+        <!--↓↓↓アーティスト名表示の区画-->
+        <div id="song_artist"></div>
+        <br>
+        <!--↓↓↓歌詞が文字単位で表示される-->
+        char:<span id="lyrics_char"></span>
+        <!--↓↓↓textalive-app-apiのモジュールをローカルインストールなしで使うためのリンク-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/textalive-app-api/dist/index.js"></script>
+        <!--↓↓↓javascriptファイルのリンク-->
+        <script src="index.js"></script>
+    </body>
+</html>
