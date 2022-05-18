@@ -29,16 +29,6 @@ player.addListener({
           lyricDiffId: 7076
         },
       });
-
-      //↓↓↓再生ボタンをhtmlファイルとリンクさせる
-      document.querySelector("#play").addEventListener("click",()=>{
-        player.video && player.requestPlay();
-      });
-
-      //↓↓↓停止ボタンをhtmlファイルとリンクさせる
-      document.querySelector("#stop").addEventListener("click",()=>{
-        player.video && player.requestStop();
-      });
 		}
 	},
 
@@ -52,4 +42,14 @@ player.addListener({
   onTimeUpdate:(position)=>{
     document.querySelector("#lyrics_char").textContent=player.video.findChar(position).text;
   }
+});
+
+//↓↓↓再生ボタンをhtmlファイルとリンクさせる
+document.querySelector("#play").addEventListener("click",()=>{
+  player.video && player.requestPlay();
+});
+
+//↓↓↓停止ボタンをhtmlファイルとリンクさせる
+document.querySelector("#stop").addEventListener("click",()=>{
+  player.video && player.requestStop();
 });
